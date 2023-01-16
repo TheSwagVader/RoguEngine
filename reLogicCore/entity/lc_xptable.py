@@ -12,3 +12,4 @@ class XPTable:
         '''
         Returns a requirable value of XP for the level following the XP table
         '''
+        return self.__table[level - 1]

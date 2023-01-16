@@ -20,7 +20,8 @@ class CharacteristicBasis:
         * STR (Strength)
         * SPD (Speed)
         * INT (Intellegence)
-        * DEF (Defence)
+        * ACC (Accurancy)
+        * CRIT (Base critical change)
         * VIT (Vitality)
         * PROT (Protection)
         * DODGE

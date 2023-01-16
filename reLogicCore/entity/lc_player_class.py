@@ -15,7 +15,7 @@ class PlayerClass:
         '''
         Sets the inflience with the values in "inf_params" list.
         It uses a tuple with the following structure: (characteristicName, influenceType)
-        
+
         Influence types:
         * A - Addition
         * M - Multiplication
@@ -30,7 +30,8 @@ class PlayerClass:
         * STR (Strength)
         * SPD (Speed)
         * INT (Intellegence)
-        * DEF (Defence)
+        * ACC (Accurancy)
+        * CRIT (Base critical change)
         * VIT (Vitality)
         * PROT (Protection)
         * DODGE

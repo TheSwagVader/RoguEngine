@@ -1,6 +1,6 @@
 class Entity:
-    def __init__(self, health, char, charColor, role):
-        self.health = health
+    def __init__(self, stats, char, charColor):
+        self.stats = stats
         self.char = char
         self.charColor = charColor
-        self.role = role
+        #self.__sprites = None
