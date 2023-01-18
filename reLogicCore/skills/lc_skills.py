@@ -1,6 +1,9 @@
+from abc import abstractmethod
+
 class BaseSkill:
     '''
     Represents a base skill class
+    This class is abstract
     '''
     def __init__(self, name, cost):
         self.__name = name
@@ -13,6 +16,10 @@ class BaseSkill:
     def getCost(self):
         return self.__cost
 
+    @abstractmethod
+    def getPrimalUsageList(self):
+        pass
+
     #def getType(self):
     #    return self.__type
 
@@ -23,17 +30,55 @@ class AttackSkill(BaseSkill):
         self.__crit = crit
         self.__accuracy = accuracy
         self.__effects = effects
+    
+    def getPrimalUsageList(self):
+        return [
+            [
+                self.__name,
+                self.__cost
+            ],
+            [
+                self.__damage,
+                self.__crit,
+                self.__accuracy,
+                self.__effects
+            ]
+        ]
+        
 
 class SupportBuffSkill(BaseSkill):
     def __init__(self, name, cost, buffEffect):
         super().__init__(name, cost)
         self.__buffEffect = buffEffect
+    
+    def getPrimalUsageList(self):
+        return [
+            [
+                self.__name,
+                self.__cost
+            ],
+            [
+                self.__buffEffect
+            ]
+        ]
 
 class SupportHealSkill(BaseSkill):
     def __init__(self, name, cost, healValue, crit):
         super().__init__(name, cost)
         self.__healValue = healValue
         self.__crit = crit
+    
+    def getPrimalUsageList(self):
+        return [
+            [
+                self.__name,
+                self.__cost
+            ],
+            [
+                self.__healValue,
+                self.__crit,
+            ]
+        ]
 
 class SupportCombinedSkill(BaseSkill):
     def __init__(self, name, cost, buffEffect, healValue, crit):
@@ -41,6 +86,19 @@ class SupportCombinedSkill(BaseSkill):
         self.__buffEffect = buffEffect
         self.__healValue = healValue
         self.__crit = crit
+
+    def getPrimalUsageList(self):
+        return [
+            [
+                self.__name,
+                self.__cost
+            ],
+            [
+                self.__healValue,
+                self.__crit,
+                self.__buffEffect,
+            ]
+        ]
 
 #class SupportSkill(BaseSkill):
 #    def __init__(self, name, cost, supportType, values, crit):
@@ -84,4 +142,28 @@ class CombinedSkill(BaseSkill):
             self.__supBuffEffect = supportSkillParameters['buffEffect']
             self.__supHealValue = supportSkillParameters['healValue']
             self.__supCrit = supportSkillParameters['crit']
-        
+
+    def getPrimalUsageList(self):
+        pul = [
+            [
+                self.__name,
+                self.__cost
+            ],
+            [
+                self.__atkDamage,
+                self.__atkCrit,
+                self.__atkAccuracy,
+                self.__atkEffects
+            ]
+        ]
+        if self.__supType == 'HEAL':
+            pul[1].append(self.__supHealValue)
+            pul[1].append(self.__supCrit)
+        elif self.__supType == 'BUFF':
+            pul[1].append(self.__supBuffEffect)
+        elif self.__supType == 'COMBO':
+            pul[1].append(self.__supHealValue)
+            pul[1].append(self.__supCrit)
+            pul[1].append(self.__supBuffEffect)
+
+        return pul

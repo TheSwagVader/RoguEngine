@@ -10,7 +10,7 @@ class Debuff:
         self.__dedebuffType = debuffType
         self.__debuffValue = debuffValue
     
-    def getDeuffTuple(self):
+    def getDebuffTuple(self):
         return (
             self.__characteristic,
             self.__debuffType,
