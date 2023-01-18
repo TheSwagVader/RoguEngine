@@ -74,6 +74,7 @@ class CombinedSkill(BaseSkill):
         self.__supCrit = None
         self.__supBuffEffect = None
 
+        #? Maybe redo for processing a tuple, not a dict
         if self.__supType == 'HEAL':
             self.__supHealValue = supportSkillParameters['healValue']
             self.__supCrit = supportSkillParameters['crit']
@@ -83,3 +84,4 @@ class CombinedSkill(BaseSkill):
             self.__supBuffEffect = supportSkillParameters['buffEffect']
             self.__supHealValue = supportSkillParameters['healValue']
             self.__supCrit = supportSkillParameters['crit']
+        
