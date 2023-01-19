@@ -1,0 +1,2 @@
+class LimitableValue:
+    pass

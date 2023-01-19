@@ -33,11 +33,11 @@ class itemQuality:
         self.__qLevel = level // 5
         self.__qLevelName = ITEM_QUALITY_LEVELS[level // 5]
 
-    def getStars(self):
-        return self.__stars
+    #def getStars(self):
+    #    return self.__stars
     
     def gerQualityLevel(self):
-        return self.__qLevelName
+        return (self.__qLevelName, self.__stars)
     
     def raiseQuality(self):
         self.__stars += 1
