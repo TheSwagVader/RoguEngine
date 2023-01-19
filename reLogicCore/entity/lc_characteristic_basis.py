@@ -12,23 +12,9 @@ class CharacteristicBasis:
         '''
         Sets the basis with the values in "parameters" list.
         The order of the parameters:
-        * HP (Health)
-        * AP (Action points)
-        * MP (Mana points)
-        * SP (Special points)
-        * OD (Overdrive)
-        * STR (Strength)
-        * SPD (Speed)
-        * INT (Intellegence)
-        * ACC (Accurancy)
-        * CRIT (Base critical change)
-        * VIT (Vitality)
-        * PROT (Protection)
-        * DODGE
-        * LUCK
-        * RES (Resistance)
-        * SEC (Secrecy)
-        * POW (Power)
+        HP (Health), AP (Action points), MP (Mana points), SP (Special points), OD (Overdrive),
+        STR (Strength), SPD (Speed), INT (Intellegence), ACC (Accurancy), CRIT (Base critical change),
+        VIT (Vitality), PROT (Protection), DODGE, LUCK, RES (Resistance), SEC (Secrecy), POW (Power)
         '''
 
         for i in range(len(self.__charsNames)):
