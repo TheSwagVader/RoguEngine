@@ -1,7 +1,14 @@
 from lc_item_rarity_quality import itemQuality, itemRarity
 
 class BaseItem:
-    def __init__(self, name, basePrice, itemType, rarity: itemRarity, quality):
+    def __init__(
+        self,
+        name,
+        basePrice,
+        itemType,
+        rarity: itemRarity,
+        quality
+    ):
         self.__name = name
         self.__basePrice = basePrice
         self.__itemType = itemType
