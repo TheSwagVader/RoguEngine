@@ -7,13 +7,15 @@ class BaseItem:
         basePrice,
         itemType,
         rarity: itemRarity,
-        quality
+        quality,
+        modificators #! some items may not have them
     ):
         self.__name = name
         self.__basePrice = basePrice
         self.__itemType = itemType
         self.__rarity = rarity
         self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         
     def getName(self):
         return self.__name
@@ -30,3 +32,5 @@ class BaseItem:
     def getQuality(self):
         return self.__quality.gerQualityLevel()
 
+    def getMods(self):
+        return self.__modificators
