@@ -21,7 +21,8 @@ class EffectBled(BaseEffect):
     If also poisoned, the effect strenghtens
     '''
     def __init__(self, duration, damage):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__damage = damage
         self.__type = 'bled'
 
@@ -38,7 +39,8 @@ class EffectPoisoned(BaseEffect):
     If also bled, the effect strenghtens
     '''
     def __init__(self, duration, damage):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__damage = damage
         self.__type = 'poisoned'
 
@@ -54,7 +56,8 @@ class EffectStunned(BaseEffect):
     During it, the entity is not avaliable to do any action (skips a turn)
     '''
     def __init__(self, duration):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__type = 'stun'
 class EffectRiposte(BaseEffect):
     '''
@@ -62,7 +65,8 @@ class EffectRiposte(BaseEffect):
     During it. if the entity was attaked, it will riposte using the defined <skill>
     '''
     def __init__(self, duration, skill):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__skill = skill
         self.__type = 'riposte'
 
@@ -82,7 +86,8 @@ class EffectWeakened(BaseEffect):
     * May be more...
     '''
     def __init__(self, duration, percent):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__percent = percent
         self.__type = 'weakened'
 
@@ -96,7 +101,8 @@ class EffectBuffed(BaseEffect):
     The increasable characteristics are written in <buffs> list
     '''
     def __init__(self, duration, buffs):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__buffs = buffs
         self.__type = 'buff'
 
@@ -110,7 +116,8 @@ class EffectDebuffed(BaseEffect):
     The decreasable characteristics are written in <debuffs> list
     '''
     def __init__(self, duration, debuffs):
-        super().__init__(duration)
+        #super().__init__(duration)
+        self.__duration = duration
         self.__debuffs = debuffs
         self.__type = 'debuff'
 

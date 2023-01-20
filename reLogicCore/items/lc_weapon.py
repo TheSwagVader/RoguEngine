@@ -1,6 +1,8 @@
 from lc_base_item import BaseItem
 
 class Weapon(BaseItem):
+    '''
+    '''
     def __init__(
         self,
         name,
@@ -15,7 +17,13 @@ class Weapon(BaseItem):
         skillset
 
     ):
-        super().__init__(name, basePrice, f'weapon_{weaponType}', rarity, quality)
+        #super().__init__(name, basePrice, f'weapon_{weaponType}', rarity, quality, modificators)
+        self.__name = name
+        self.__basePrice = basePrice
+        self.__itemType = f'weapon_{weaponType}'
+        self.__rarity = rarity
+        self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         self.__damageRange = damageRange
         self.__baseCritChance = baseCriticalChance
         self.__handsRequired = handsRequired
@@ -23,8 +31,8 @@ class Weapon(BaseItem):
         self.__skillset = skillset
         self.__assignedSkillsValue = len(skillset)
     
-    def getMods(self):
-        return self.__modificators
+    #def getMods(self):
+    #    return self.__modificators
 
     def getWeaponSkill(self, number):
         if number >= self.__assignedSkillsValue:

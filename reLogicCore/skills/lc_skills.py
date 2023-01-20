@@ -25,7 +25,9 @@ class BaseSkill:
 
 class AttackSkill(BaseSkill): 
     def __init__(self, name, cost, damage, crit, accuracy, effects):
-        super().__init__(name, cost)
+        #super().__init__(name, cost)
+        self.__name = name
+        self.__cost = cost
         self.__damage = damage
         self.__crit = crit
         self.__accuracy = accuracy
@@ -48,7 +50,9 @@ class AttackSkill(BaseSkill):
 
 class SupportBuffSkill(BaseSkill):
     def __init__(self, name, cost, buffEffect):
-        super().__init__(name, cost)
+        #super().__init__(name, cost)
+        self.__name = name
+        self.__cost = cost
         self.__buffEffect = buffEffect
     
     def getPrimalUsageList(self):
@@ -64,7 +68,9 @@ class SupportBuffSkill(BaseSkill):
 
 class SupportHealSkill(BaseSkill):
     def __init__(self, name, cost, healValue, crit):
-        super().__init__(name, cost)
+        #super().__init__(name, cost)
+        self.__name = name
+        self.__cost = cost
         self.__healValue = healValue
         self.__crit = crit
     
@@ -82,7 +88,9 @@ class SupportHealSkill(BaseSkill):
 
 class SupportCombinedSkill(BaseSkill):
     def __init__(self, name, cost, buffEffect, healValue, crit):
-        super().__init__(name, cost)
+        #super().__init__(name, cost)
+        self.__name = name
+        self.__cost = cost
         self.__buffEffect = buffEffect
         self.__healValue = healValue
         self.__crit = crit
@@ -119,7 +127,9 @@ class CombinedSkill(BaseSkill):
         supportSkillType,
         supportSkillParameters
     ):
-        super().__init__(name, cost)
+        #super().__init__(name, cost)
+        self.__name = name
+        self.__cost = cost
         #self.__attack = 0
         self.__atkDamage = atkDamage
         self.__atkCrit = atkCrit
