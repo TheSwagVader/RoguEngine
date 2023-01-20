@@ -19,12 +19,12 @@ class Weapon(BaseItem):
         self.__damageRange = damageRange
         self.__baseCritChance = baseCriticalChance
         self.__handsRequired = handsRequired
-        self.__modificatios = modificators
+        self.__modificators = modificators
         self.__skillset = skillset
         self.__assignedSkillsValue = len(skillset)
     
     def getMods(self):
-        return self.__modificatios
+        return self.__modificators
 
     def getWeaponSkill(self, number):
         if number >= self.__assignedSkillsValue:

@@ -1,6 +1,6 @@
 import lc_sysconst
 
-class PlayerClass:
+class PlayerBattleClass:
     '''
     This class defines a class of player's character.
     The class influences limits for the equipment that player can use,
