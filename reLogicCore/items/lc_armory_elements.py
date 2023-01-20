@@ -38,6 +38,24 @@ class BattleBelt(BaseItem):
         self.__maxItems = slots
         #self.__modificators = modificators
 
+    def getItem(self, number):
+        if number >= self.__maxItems:
+            return None
+        else:
+            return self.__beltInventory[number]
+
+    def deleteItem(self, number):
+        #? deleted item returning
+        if number < self.__maxItems:
+            self.__beltInventory[number] = None
+
+    #? idk
+    def deleteItemWithShift(self, number):
+        pass
+
+    def addItem(self, item):
+        if len(self.__beltInventory) < self.__maxItems:
+            self.__beltInventory.append(item) #TODO stacking the same items
 class Ring(BaseItem):
     def __init__(
         self,
@@ -83,4 +101,5 @@ class ForceField(BaseItem):
         self.__capacity = capacity
         self.__durability = durability
         self.__damageAbsorbationPercent = damageAbsorbationPercent
+        #TODO Damage getting to the force field
         #self.__modificators = modificators
