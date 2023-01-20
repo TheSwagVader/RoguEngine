@@ -11,7 +11,13 @@ class CommonArmoryElement(BaseItem):
         defence,
         modificators
     ):
-        super().__init__(name, basePrice, f'armor_{armoryElementType}', rarity, quality, modificators)
+        #super().__init__(name, basePrice, f'armor_{armoryElementType}', rarity, quality, modificators)
+        self.__name = name
+        self.__basePrice = basePrice
+        self.__itemType = f'armor_{armoryElementType}'
+        self.__rarity = rarity
+        self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         self.__defence = defence
         #self.__modificators = modificators
 
@@ -32,7 +38,13 @@ class BattleBelt(BaseItem):
         slots,
         modificators
     ):
-        super().__init__(name, basePrice, 'armor_battle_belt', rarity, quality, modificators)
+        #super().__init__(name, basePrice, 'armor_battle_belt', rarity, quality, modificators)
+        self.__name = name
+        self.__basePrice = basePrice
+        self.__itemType = 'armor_battle_belt'
+        self.__rarity = rarity
+        self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         #self.__defence = defence
         self.__beltInventory = []
         self.__maxItems = slots
@@ -67,7 +79,13 @@ class Ring(BaseItem):
         finger,
         modificators
     ):
-        super().__init__(name, basePrice, f'armor_ring_{hand}_hand_{finger}_finger', rarity, quality, modificators)
+        #super().__init__(name, basePrice, f'armor_ring_{hand}_hand_{finger}_finger', rarity, quality, modificators)
+        self.__name = name
+        self.__basePrice = basePrice
+        self.__itemType = f'armor_ring_{hand}_hand_{finger}_finger'
+        self.__rarity = rarity
+        self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         self.__hand = hand
         self.__finger = finger
         #self.__modificators = modificators
@@ -81,7 +99,13 @@ class Talisman(BaseItem):
         quality,
         modificators
     ):
-        super().__init__(name, basePrice, 'armor_talisman', rarity, quality, modificators)
+        #super().__init__(name, basePrice, 'armor_talisman', rarity, quality, modificators)
+        self.__name = name
+        self.__basePrice = basePrice
+        self.__itemType = 'armor_talisman'
+        self.__rarity = rarity
+        self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         #self.__modificators = modificators
 
 class ForceField(BaseItem):
@@ -97,7 +121,13 @@ class ForceField(BaseItem):
         damageAbsorbationPercent,
         modificators
     ):
-        super().__init__(name, basePrice, f'armor_{armoryElementType}', rarity, quality, modificators)
+        #super().__init__(name, basePrice, f'armor_{armoryElementType}', rarity, quality, modificators)
+        self.__name = name
+        self.__basePrice = basePrice
+        self.__itemType = 'armor_force_field'
+        self.__rarity = rarity
+        self.__quality = itemQuality(quality)
+        self.__modificators = modificators
         self.__capacity = capacity
         self.__durability = durability
         self.__damageAbsorbationPercent = damageAbsorbationPercent
