@@ -1,4 +1,6 @@
-ITEM_TYPES = [
+#ARMOR_INDEX = (0, )
+
+ARMOR_TYPES = [
     'armory_helmet',
     'armory_chestplate',
     'armory_gloves',
@@ -18,6 +20,8 @@ ITEM_TYPES = [
     'armor_talisman',
     'armor_force_field'
 ]
+
+ITEM_TYPES = []
 
 FINGERS = [
     'thumb',

@@ -23,9 +23,9 @@ class BaseItem:
         self.__modificators = modificators
         
     def getName(self):
-        '''
-        Returns the item's name
-        '''
+        #'''
+        #Returns the item's name
+        #'''
         return self.__name
     
     def getBasePrice(self):
