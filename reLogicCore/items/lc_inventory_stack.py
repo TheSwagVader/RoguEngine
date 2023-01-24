@@ -9,6 +9,11 @@ class Stack:
             self.__item = item
             self.__amount = 1
             self.__maxAmount = item.getMaxStacking()
+        elif self.__item == item:
+            if self.__amount <= self.__maxAmount:
+                self.__amount += 1
+        else:
+            pass #TODO raise exception
 
     def dropOne(self):
         if self.__amount > 1:
@@ -31,5 +36,8 @@ class Stack:
         self.__amount = 0
         self.__maxAmount = 0
 
-    def __nonEmpty(self):
-        pass
+    def isEmpty(self):
+        return self.__item == None
+
+    def isFull(self):
+        return self.__amount == self.__maxAmount

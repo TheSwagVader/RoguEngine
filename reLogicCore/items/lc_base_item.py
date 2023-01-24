@@ -62,3 +62,6 @@ class BaseItem:
 
     def getMaxStacking(self):
         return self.__maxStack
+
+    def __eq__(self, other):
+        return self.__name == other.getName()

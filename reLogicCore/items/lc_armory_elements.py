@@ -1,5 +1,4 @@
 from lc_base_item import BaseItem
-
 class CommonArmoryElement(BaseItem):
     def __init__(
         self,
