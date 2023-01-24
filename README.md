@@ -4,6 +4,10 @@
 A free game engine for roguelike games (that possibly will be used only in one game)
 Work in progress, there are a lot of things to do
 
+Current goal - Inventory and Stacks
+
+This project uses Python 3.10.9, I'm not sure it will work on earlier versions
+
 ## The Engine's Structure
 
 The engine will include 4 parts:
