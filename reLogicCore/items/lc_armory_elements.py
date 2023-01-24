@@ -46,7 +46,7 @@ class BattleBelt(BaseItem):
         self.__quality = itemQuality(quality)
         self.__modificators = modificators
         #self.__defence = defence
-        self.__beltInventory = []
+        self.__beltInventory = [None for _ in range(slots)]
         self.__maxItems = slots
         #self.__modificators = modificators
 
@@ -66,8 +66,17 @@ class BattleBelt(BaseItem):
         pass
 
     def addItem(self, item):
-        if len(self.__beltInventory) < self.__maxItems:
-            self.__beltInventory.append(item) #TODO stacking the same items
+        if self.__beltInventory.count(None) != 0:
+        #if len(self.__beltInventory) < self.__maxItems:
+            
+            self.__beltInventory[self.__findNone()] = item #TODO stacking the same items
+
+    def __findNone(self):
+        for i in range(self.__beltInventory):
+            if self.__beltInventory == None:
+                return i
+
+    
 class Ring(BaseItem):
     def __init__(
         self,

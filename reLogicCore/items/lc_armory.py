@@ -21,12 +21,15 @@ class EquipmentCell:
     def hasTheItem(self):
         return self.__hasTheItem
 
+    def getEquipmentType(self):
+        return self.__equipmentType
+
 class CharacterEquipment:
 
     def __init__(self):
         self.__charEquipment = dict()
         for armorTypeElement in lc_it_sysconst.ARMOR_TYPES:
-            self.__charEquipment[armorTypeElement] = EquipmentCell(armotTypeElement)
+            self.__charEquipment[armorTypeElement] = EquipmentCell(armorTypeElement)
 
     def putOnItem(self, equipmentType, item):
         self.__charEquipment[equipmentType].putOnItem(item)
@@ -35,7 +38,10 @@ class CharacterEquipment:
         self.__charEquipment[equipmentType].takeOffItem()
 
     def hasTheItem(self, equipmentType):
-        self.__charEquipment[equipmentType].hasTheItem()
+        return self.__charEquipment[equipmentType].hasTheItem()
+
+    def getEquipmentType(self, equipmentType):
+        return self.__charEquipment[equipmentType].getEquipmentType()
 
     def replaceItem(self, equipmentType, item):
         self.takeOffItem(equipmentType)

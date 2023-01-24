@@ -21,6 +21,10 @@ ARMOR_TYPES = [
     'armor_force_field'
 ]
 
+WEAPON_TYPES = [
+]
+
+#TODO weapon subtypes like fist, melee, distance
 ITEM_TYPES = []
 
 FINGERS = [
