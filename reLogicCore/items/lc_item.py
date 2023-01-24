@@ -24,3 +24,6 @@ class Currency(BaseItem):
 
 class Artifact(BaseItem):
     pass
+
+class Food(BaseItem):
+    pass

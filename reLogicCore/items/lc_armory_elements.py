@@ -19,6 +19,7 @@ class CommonArmoryElement(BaseItem):
         self.__quality = itemQuality(quality)
         self.__modificators = modificators
         self.__defence = defence
+        self.__maxStack = 1
         #self.__modificators = modificators
 
     def getDefence(self):
@@ -48,6 +49,7 @@ class BattleBelt(BaseItem):
         #self.__defence = defence
         self.__beltInventory = [None for _ in range(slots)]
         self.__maxItems = slots
+        self.__maxStack = 1
         #self.__modificators = modificators
 
     def getItem(self, number):
@@ -97,6 +99,7 @@ class Ring(BaseItem):
         self.__modificators = modificators
         self.__hand = hand
         self.__finger = finger
+        self.__maxStack = 1
         #self.__modificators = modificators
 
 class Talisman(BaseItem):
@@ -115,6 +118,7 @@ class Talisman(BaseItem):
         self.__rarity = rarity
         self.__quality = itemQuality(quality)
         self.__modificators = modificators
+        self.__maxStack = 1
         #self.__modificators = modificators
 
 class ForceField(BaseItem):
@@ -140,5 +144,6 @@ class ForceField(BaseItem):
         self.__capacity = capacity
         self.__durability = durability
         self.__damageAbsorbationPercent = damageAbsorbationPercent
+        self.__maxStack = 1
         #TODO Damage getting to the force field
         #self.__modificators = modificators

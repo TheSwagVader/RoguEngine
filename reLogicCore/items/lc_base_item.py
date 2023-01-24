@@ -13,7 +13,8 @@ class BaseItem:
         itemType,
         rarity: itemRarity,
         quality,
-        modificators #! some items may not have them
+        modificators,  #! some items may not have them
+        maxStacking
     ):
         self.__name = name
         self.__basePrice = basePrice
@@ -21,6 +22,7 @@ class BaseItem:
         self.__rarity = rarity
         self.__quality = itemQuality(quality)
         self.__modificators = modificators
+        self.__maxStack = maxStacking
         
     def getName(self):
         #'''
@@ -57,3 +59,6 @@ class BaseItem:
         Returns the item's stats modificators
         '''
         return self.__modificators
+
+    def getMaxStacking(self):
+        return self.__maxStack
