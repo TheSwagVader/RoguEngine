@@ -24,8 +24,31 @@ ARMOR_TYPES = [
 WEAPON_TYPES = [
 ]
 
-#TODO weapon subtypes like fist, melee, distance
-ITEM_TYPES = []
+#? TODO weapon subtypes like fist, melee, distance
+ITEM_TYPES = [
+    'knuckledusters',
+    'claws',
+    'heavy_gloves',
+    'dagger',
+    'knife',
+    'hunter_knife',
+    'combat_knife',
+    'short_sword',
+    'sword',
+    'two-handed_sword',
+    'mace',
+    'two_maces',
+    'two-handed_mace',
+    'saber',
+    'two_sabers',
+    'hammer',
+    'two_hammers',
+    'two-handed_hammer',
+    'stick',
+    'rod',
+    'sai',
+    '' #TODO more weapon types
+]
 
 FINGERS = [
     'thumb',
